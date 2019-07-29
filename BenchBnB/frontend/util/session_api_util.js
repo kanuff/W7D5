@@ -1,6 +1,6 @@
 
 export const signup = (formUser) => {
-  debugger
+  //debugger  
   return $.ajax({
     method: 'POST', 
     url: '/api/users', 
@@ -11,7 +11,7 @@ export const signup = (formUser) => {
 }
 
 export const login = (formUser) => {
-  debugger
+  //debugger  
   return $.ajax({
     method: 'POST',
     url: '/api/session',
@@ -22,7 +22,7 @@ export const login = (formUser) => {
 }
 
 export const logout = () => {
-  debugger
+  //debugger  
   return $.ajax({
     method: 'DELETE',
     url: '/api/session',

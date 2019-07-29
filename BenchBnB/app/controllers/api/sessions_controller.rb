@@ -4,11 +4,10 @@ class Api::SessionsController < ApplicationController
   def create
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
     if @user 
-      debugger
       login!(@user)
-      render :show #???
+      render :show
     else
-      render json: @user.errors.full_messages, status: 422
+      render json: ["Username/password do not match"], status: 422
     end
   end 
 
